@@ -1,4 +1,7 @@
-# mini-docker-rust
+# mini-docker-rust [![travis][travis-image]][travis-url]
+
+[travis-image]: https://img.shields.io/travis/kpcyrd/mini-docker-rust/master.svg
+[travis-url]: https://travis-ci.org/kpcyrd/mini-docker-rust
 
 Very small rust docker image.
 
@@ -27,12 +30,12 @@ RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories 
 	# Finally, we build our project
 	&& cargo build --release \
 	# After that we copy our binary to the project root (you need to adjust this to your project)
-	&& cp target/release/foo . \
+	&& cp target/release/mini-docker-rust . \
 	# And discard the target/ directory so it won't bloat our image
 	&& rm -rf target/ \
 	# As the final cleanup step we uninstall our virtual package
 	# This uninstalls cargo, rust and all dependencies that aren't needed anymore so they won't end up in the final image
 	&& apk del --purge .build-rust
 # Finally, we configure our binary as entrypoint (you need to adjust this too)
-ENTRYPOINT ["./foo"]
+ENTRYPOINT ["./mini-docker-rust"]
 ```

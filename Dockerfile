@@ -5,7 +5,7 @@ RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories 
 	&& apk add --no-cache llvm-libunwind \
 	&& apk add --no-cache --virtual .build-rust rust cargo \
 	&& cargo build --release \
-	&& cp target/release/foo . \
+	&& cp target/release/mini-docker-rust . \
 	&& rm -rf target/ \
 	&& apk del --purge .build-rust
-ENTRYPOINT ["./foo"]
+ENTRYPOINT ["./mini-docker-rust"]
