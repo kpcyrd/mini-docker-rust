@@ -9,7 +9,7 @@ This is an example project on how to build very small docker images for a rust p
 
 ## See for yourself
 
-You don't need to install anything besides docker. Build with `docker build -t mini-docker-rust .` and run with `docker build -t mini-docker-rust`.
+You don't need to install anything besides docker. Build with `docker build -t mini-docker-rust .` and run with `docker run mini-docker-rust`.
 
 ## Annotated docker file
 
