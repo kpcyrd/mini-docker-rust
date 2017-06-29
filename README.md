@@ -29,8 +29,8 @@ RUN apk add --no-cache llvm-libunwind \
     && cargo build --release \
     # After that we copy our binary to the project root (you need to adjust this to your project)
     && cp target/release/mini-docker-rust . \
-    # And discard the target/ directory so it won't bloat our image
-    && rm -rf target/ \
+    # Discard the target/ and ~/.cargo/ directory so it won't bloat our image
+    && rm -rf target/ ~/.cargo/ \
     # As the final cleanup step we uninstall our virtual package
     # This uninstalls cargo, rust and all dependencies that aren't needed anymore so they won't end up in the final image
     && apk del --purge .build-rust
