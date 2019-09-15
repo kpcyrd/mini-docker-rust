@@ -1,10 +1,18 @@
-FROM alpine:latest
-COPY ./ /app
+# Start with a rust alpine image
+FROM rust:1-alpine3.10
+# if needed, install dependencies here
+#RUN apk add libseccomp-dev
+# set the workdir and copy the source into it
 WORKDIR /app
-RUN apk add --no-cache libgcc \
-    && apk add --no-cache --virtual .build-rust rust cargo \
-    && cargo build --release \
-    && cp target/release/mini-docker-rust . \
-    && rm -rf target/ ~/.cargo/ \
-    && apk del --purge .build-rust
-ENTRYPOINT ["./mini-docker-rust"]
+COPY ./ /app
+# do a release build
+RUN cargo build --release
+
+# use a plain alpine image, the alpine version needs to match the builder
+FROM alpine:3.10
+# if needed, install dependencies here
+#RUN apk add libseccomp
+# copy the binary into the final image
+COPY --from=0 /app/target/release/mini-docker-rust .
+# set the binary as entrypoint
+ENTRYPOINT ["/mini-docker-rust"]
