@@ -7,6 +7,7 @@ WORKDIR /app
 COPY ./ /app
 # do a release build
 RUN cargo build --release
+RUN strip target/release/mini-docker-rust
 
 # use a plain alpine image, the alpine version needs to match the builder
 FROM alpine:3.11
