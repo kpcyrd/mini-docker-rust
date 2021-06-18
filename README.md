@@ -5,7 +5,7 @@
 
 Very small rust docker image.
 
-This is an example project on how to build very small docker images for a rust project. The resulting image for a working hello world was about 8.1MB during my tests.
+This is an example project on how to build very small docker images for a rust project. The resulting image for a working hello world was about 6.01MB during my tests.
 
 ## See for yourself
 
