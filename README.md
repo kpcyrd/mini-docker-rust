@@ -7,7 +7,7 @@ Very small rust docker image.
 
 This is an example project on how to build very small docker images for a rust project. The resulting image for a working hello world was about 6.01MB during my tests.
 
-This repo is trying to keep the docker overhead to a minimum without scarifying performance or the usability implications of using `FROM scratch`. If you want to reduce the binary size further you might be interested in [johnthagen/min-sized-rust](https://github.com/johnthagen/min-sized-rust).
+This repo is trying to keep the docker overhead to a minimum without sacrificing performance or the usability implications of using `FROM scratch`. If you want to reduce the binary size further you might be interested in [johnthagen/min-sized-rust](https://github.com/johnthagen/min-sized-rust).
 
 ## See for yourself
 
