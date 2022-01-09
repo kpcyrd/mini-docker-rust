@@ -1,5 +1,5 @@
 # Start with a rust alpine image
-FROM rust:1-alpine3.13
+FROM rust:1.57-alpine
 # This is important, see https://github.com/rust-lang/docker-rust/issues/85
 ENV RUSTFLAGS="-C target-feature=-crt-static"
 # if needed, add additional dependencies here
