@@ -12,7 +12,7 @@ RUN cargo build --release
 RUN strip target/release/mini-docker-rust
 
 # use a plain alpine image, the alpine version needs to match the builder
-FROM alpine:3.15
+FROM alpine:3.14
 # if needed, install additional dependencies here
 RUN apk add --no-cache libgcc
 # copy the binary into the final image
