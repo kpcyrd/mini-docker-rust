@@ -1,7 +1,4 @@
-# mini-docker-rust [![travis][travis-image]][travis-url]
-
-[travis-image]: https://img.shields.io/travis/kpcyrd/mini-docker-rust/master.svg
-[travis-url]: https://travis-ci.com/kpcyrd/mini-docker-rust
+# mini-docker-rust [![CircleCI](https://circleci.com/gh/parasew/mini-docker-rust/tree/main.svg?style=svg)](https://circleci.com/gh/parasew/mini-docker-rust/tree/main)
 
 Very small rust docker image.
 
