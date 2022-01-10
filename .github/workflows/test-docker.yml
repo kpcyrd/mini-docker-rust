@@ -1,0 +1,9 @@
+name: test-docker
+on: [push]
+jobs:
+  check-docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker build -t mini-docker-rust .
+      - run: docker run mini-docker-rust
