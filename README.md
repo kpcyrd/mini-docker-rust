@@ -1,4 +1,4 @@
-# mini-docker-rust [![CircleCI](https://circleci.com/gh/kpcyrd/mini-docker-rust/tree/main.svg?style=svg)](https://circleci.com/gh/kpcyrd/mini-docker-rust/tree/main)
+# mini-docker-rust [![CircleCI](https://circleci.com/gh/parasew/mini-docker-rust/tree/main.svg?style=svg)](https://circleci.com/gh/parasew/mini-docker-rust/tree/main)
 
 Very small rust docker image.
 
