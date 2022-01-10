@@ -1,8 +1,8 @@
+version: 2
 jobs:
-  build:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - run: docker build -t mini-docker-rust .
-      - run: docker run mini-docker-rust
+ build:
+   machine: true
+   steps:
+     - checkout
+     - run: docker build -t mini-docker-rust .
+     - run: docker run mini-docker-rust
