@@ -1,7 +1,7 @@
 # mini-docker-rust [![travis][travis-image]][travis-url]
 
 [travis-image]: https://img.shields.io/travis/kpcyrd/mini-docker-rust/master.svg
-[travis-url]: https://travis-ci.org/kpcyrd/mini-docker-rust
+[travis-url]: https://travis-ci.com/kpcyrd/mini-docker-rust
 
 Very small rust docker image.
 
