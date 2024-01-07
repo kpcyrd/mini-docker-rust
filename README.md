@@ -2,7 +2,7 @@
 
 Very small rust docker image.
 
-This is an example project on how to build very small docker images for a rust project. The resulting image for a working hello world was 5.69MB in the case of Alpine 3.16. Alpine versions differ in size, so make sure to test different versions if you need to optimize for size. Checked sizes with `docker system df -v`
+This is an example project on how to build very small docker images for a rust project. The resulting image for a working `hello world` was 5.69MB in the case of Alpine 3.16. Alpine versions have changed in size with past releases (see below a table with historic sizes of the docker images). Using end-of-life Alpine/Rust releases is not advised (even if they might be slightly smaller). Checked sizes with `docker system df -v`
 
 | Alpine      | Size   |
 | ----------- | ------ |
